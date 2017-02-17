@@ -1,0 +1,45 @@
+var _exercism$xelm$Raindrops$raindrops = function (num) {
+	var _p0 = {
+		ctor: '_Tuple3',
+		_0: A2(_elm_lang$core$Basics_ops['%'], num, 3),
+		_1: A2(_elm_lang$core$Basics_ops['%'], num, 5),
+		_2: A2(_elm_lang$core$Basics_ops['%'], num, 7)
+	};
+	_v0_7:
+	do {
+		if (_p0.ctor === '_Tuple3') {
+			if (_p0._0 === 0) {
+				if (_p0._1 === 0) {
+					if (_p0._2 === 0) {
+						return 'PlingPlangPlong';
+					} else {
+						return 'PlingPlang';
+					}
+				} else {
+					if (_p0._2 === 0) {
+						return 'PlingPlong';
+					} else {
+						return 'Pling';
+					}
+				}
+			} else {
+				if (_p0._1 === 0) {
+					if (_p0._2 === 0) {
+						return 'PlangPlong';
+					} else {
+						return 'Plang';
+					}
+				} else {
+					if (_p0._2 === 0) {
+						return 'Plong';
+					} else {
+						break _v0_7;
+					}
+				}
+			}
+		} else {
+			break _v0_7;
+		}
+	} while(false);
+	return _elm_lang$core$Basics$toString(num);
+};

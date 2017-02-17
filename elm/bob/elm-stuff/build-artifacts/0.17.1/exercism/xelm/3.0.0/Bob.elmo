@@ -1,0 +1,29 @@
+var _exercism$xelm$Bob$lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
+var _exercism$xelm$Bob$allLetters = A2(
+	_elm_lang$core$Basics_ops['++'],
+	_elm_lang$core$String$toUpper(_exercism$xelm$Bob$lowercaseLetters),
+	_exercism$xelm$Bob$lowercaseLetters);
+var _exercism$xelm$Bob$wordCharacters = A2(_elm_lang$core$Basics_ops['++'], _exercism$xelm$Bob$allLetters, '1234567890');
+var _exercism$xelm$Bob$anyWordCharacters = function ($char) {
+	return A2(
+		_elm_lang$core$String$contains,
+		_elm_lang$core$String$fromChar($char),
+		_exercism$xelm$Bob$wordCharacters);
+};
+var _exercism$xelm$Bob$anyLetters = function ($char) {
+	return A2(
+		_elm_lang$core$String$contains,
+		_elm_lang$core$String$fromChar($char),
+		_exercism$xelm$Bob$allLetters);
+};
+var _exercism$xelm$Bob$hey = function (speech) {
+	return (_elm_lang$core$Native_Utils.eq(
+		_elm_lang$core$String$toUpper(speech),
+		speech) && _elm_lang$core$Native_Utils.eq(
+		A2(_elm_lang$core$String$any, _exercism$xelm$Bob$anyLetters, speech),
+		true)) ? 'Whoa, chill out!' : (_elm_lang$core$Native_Utils.eq(
+		A2(_elm_lang$core$String$right, 1, speech),
+		'?') ? 'Sure.' : (_elm_lang$core$Native_Utils.eq(
+		A2(_elm_lang$core$String$any, _exercism$xelm$Bob$anyWordCharacters, speech),
+		false) ? 'Fine. Be that way!' : 'Whatever.'));
+};
