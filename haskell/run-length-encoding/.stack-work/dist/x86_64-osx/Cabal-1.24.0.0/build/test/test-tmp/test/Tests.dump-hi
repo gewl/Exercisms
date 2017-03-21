@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-21 03:02:26.967092 UTC
+2017-03-21 03:35:44.506345 UTC
 
 interface main@main:Main 8001
-  interface hash: 8812b25dfb2e383ca8751bdcf1dfd219
-  ABI hash: 99be07ba4cb9d85bc7ec155f5bc6e34b
+  interface hash: 32fbe44748bd8a82c1ceb3c117a3034b
+  ABI hash: 0571e6ea5a4ca9b917472b92fd349473
   export-list hash: e5fe968496cbdce3322374c62f7e2d51
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: c11b8a238d47271e42f490b30e4ca3bc
@@ -80,7 +80,7 @@ import  -/  hspec-core-2.2.4@hspec-core-2.2.4-C2yvU0SbvsgIHvOhYhUEvg:Test.Hspec.
 import  -/  hspec-core-2.2.4@hspec-core-2.2.4-C2yvU0SbvsgIHvOhYhUEvg:Test.Hspec.Core.Spec.Monad 7eb27154b11d7753c912232d8cd742c5
 import  -/  hspec-core-2.2.4@hspec-core-2.2.4-C2yvU0SbvsgIHvOhYhUEvg:Test.Hspec.Options 66cbd921344c2e9d6ee5dc1754679cd0
 import  -/  hspec-expectations-0.7.2@hspec-expectations-0.7.2-2hcUzmYSxY99w7X9aRVhtQ:Test.Hspec.Expectations ca5f5a50dd0587de1f261c5a819c188f
-import  -/  run-length-encoding-0.0.0@run-length-encoding-0.0.0-FyHcxGrdAH29H6gjJRsd6l:RunLength 629e0c472bf2d49ac81b6fe655e73500
+import  -/  run-length-encoding-0.0.0@run-length-encoding-0.0.0-FyHcxGrdAH29H6gjJRsd6l:RunLength ebae75730bfd348a2acfd90dd8e03f86
 8e216c2206cb8f7be813d7cecb9e50d3
   $tc'Case :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -201,7 +201,7 @@ db083e0d1d53597f1f14756da5740117
                             (Test.Hspec.Core.Tree.Item
                                (Sub (Test.Hspec.Core.Example.D:R:ArgIO[0])))_R)_R])_R
                        (case ipv3 of wild { (,) b1 w' -> w' })) #) }) -}
-19d7571cfc7aca40192a19b8f9bf9811
+22584805e06356d6c112ffe07991b262
   $wc1 ::
     GHC.Base.String
     -> GHC.Base.String
@@ -313,12 +313,12 @@ bc1ffbae2b969e01a930af6a25372fd2
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Main.Case) ->
                  case ds of wild { Main.Case ds1 ds2 ds3 -> ds2 }) -}
-d4ce78d90d044f740a9ff5c981f8d7f7
+710cf047716d85fc4809a309bcb4f55b
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-afce77ce26b5563aed3dc7fa94d24e3b
+102a0042f6f11b9654e1917deff12436
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -386,7 +386,7 @@ a7c2b566e70220d9d154e5f6cde3688b
                    Test.Hspec.Core.Spec.it9
                    Test.Hspec.Core.Spec.it2
                    Main.main20) -}
-e9599785909bbd65dbcdaf4779e27111
+92bc5953bbda63a4c5196dbbc3920116
   main2 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -656,7 +656,7 @@ f9d6d11fcf900b3bda2d9dcb29e0ff99
   main48 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "encode empty string"#) -}
-e44c2a86bfd22ae743ca576fd9db78cd
+7c840f34ef97e97ca125627e03f2f0c8
   main49 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -687,7 +687,7 @@ e44c2a86bfd22ae743ca576fd9db78cd
                       @ (Test.Hspec.Core.Tree.SpecTree
                            (Test.Hspec.Core.Example.Arg
                               Test.Hspec.Expectations.Expectation)))) -}
-7e497ae701e5cd73a5eda1e4b7cf7c49
+94534c04dd2ea2c57d6bbae8a66fe5c7
   main50 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -706,7 +706,7 @@ e44c2a86bfd22ae743ca576fd9db78cd
                         (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
                                   <[Test.Hspec.Core.Tree.SpecTree ()]>_N <GHC.Types.IO>_R <()>_N)))
                    w) -}
-aab7f7b4f90e59296a0f402d9a8a20b1
+2599a54219b891cd51e53576938d4b17
   main51 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -766,7 +766,7 @@ e3745dac7ef71d493f540b119e319106
                    GHC.Types.False
                    Test.Hspec.Options.defaultConfig1
                    (GHC.Base.Nothing @ GHC.Types.Int)) -}
-6afbccf7377d984a6d4843f63d72a7da
+67d056185342807905ab0016b6006c40
   main59 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

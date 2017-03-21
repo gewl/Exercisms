@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-21 03:02:25.930156 UTC
+2017-03-21 03:36:35.700751 UTC
 
 interface run-length-encoding-0.0.0-FyHcxGrdAH29H6gjJRsd6l:RunLength 8001
-  interface hash: 2bd81ab181573d8b8b3d321ad7f77230
-  ABI hash: 629e0c472bf2d49ac81b6fe655e73500
+  interface hash: 04410b6ffe187229522c8e4544cfee66
+  ABI hash: ebae75730bfd348a2acfd90dd8e03f86
   export-list hash: b5778c590b0551cb691aaa7f9d7c802f
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: a4046e0fdab24403354cf30558c1ea1c
@@ -38,11 +38,14 @@ family instance modules: base-4.9.0.0:Control.Applicative
                          base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
                          base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
                          containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
 import  -/  base-4.9.0.0:Data.List 49b86831b79b49ce5d4d9416ecba61df
 import  -/  base-4.9.0.0:Data.OldList 0058409f994fb13ae0616e3f1e5b4dae
 import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
 import  -/  base-4.9.0.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:Text.Read 9c1be14f7e5eac8b18bcb566c5763677
 import  -/  regex-base-0.93.2@regex-base-0.93.2-4lnOy3Rb1yfISFVEXVfJuH:Text.Regex.Base.RegexLike b8692477348c2a4d1fff220a9b06b0e5
 import  -/  regex-compat-0.95.1@regex-compat-0.95.1-JPDhOGKcrkD8S1t3VsLLUt:Text.Regex 2e0f41d0f59e05da1f92fdea8b839e85
 import  -/  regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR:Text.Regex.Posix 9d77d3563c26f7b32a543afbb9648050
@@ -62,15 +65,19 @@ da09294283fffddcfca376a27e441036
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "run-length-encoding-0.0.0-FyHcxGrdAH29H6gjJRsd6l"#) -}
-256a0bc0fe9292c14773049758d0c6ed
+48abcb940238f11b89079b82c38f884b
   decode :: GHC.Base.String -> GHC.Base.String
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: (\ (cs :: GHC.Base.String) ->
-                 case Text.Regex.Base.Context.$fRegexContextabAllTextMatches10
+                 case GHC.Base.map
                         @ [GHC.Types.Char]
-                        (Text.Regex.Posix.String.$fRegexLikeRegex[]_$cmatchAllText
-                           RunLength.decode2
-                           cs) of wild {
+                        @ [GHC.Types.Char]
+                        RunLength.f
+                        (Text.Regex.Base.Context.$fRegexContextabAllTextMatches10
+                           @ [GHC.Types.Char]
+                           (Text.Regex.Posix.String.$fRegexLikeRegex[]_$cmatchAllText
+                              RunLength.decode1
+                              cs)) of wild {
                    [] -> GHC.Types.[] @ GHC.Types.Char
                    : x xs1
                    -> Data.OldList.intercalate_$spoly_go
@@ -78,13 +85,10 @@ da09294283fffddcfca376a27e441036
                         x
                         (Data.OldList.prependToAll
                            @ [GHC.Types.Char]
-                           RunLength.decode1
+                           (GHC.Types.[] @ GHC.Types.Char)
                            xs1) }) -}
-e2db9825ff4a62b951b6b691946e5f6b
-  decode1 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "a "#) -}
-03d8c3fc3c3c66f81cc60d97dab062cd
-  decode2 :: Text.Regex.Posix.Wrap.Regex
+b2ca9c7aa7e9dd91baf82f23db93df8e
+  decode1 :: Text.Regex.Posix.Wrap.Regex
   {- Unfolding: (Text.Regex.Posix.String.$fRegexMakerRegexCompOptionExecOption[]_$cmakeRegexOpts
                    Text.Regex.Posix.Wrap.$fRegexOptionsRegexCompOptionExecOption1
                      `cast`
@@ -96,13 +100,91 @@ e2db9825ff4a62b951b6b691946e5f6b
                    (Trans
                         (Sym (Foreign.C.Types.N:CInt[0]))
                         (Sym (Text.Regex.Posix.Wrap.N:ExecOption[0])))
-                   RunLength.decode3) -}
-0eed1e1a83a6b0cf2204b071b0817f61
-  decode3 :: [GHC.Types.Char]
+                   RunLength.decode2) -}
+b3328b1324baced30c08c4a514987995
+  decode2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "[0-9]*[[:alpha:]]"#) -}
+663d39df680426a3aa3fb01b9232200a
+  decode3 :: GHC.Types.Int
+  {- Strictness: x -}
+e2668d8c3adba771093a2b4e491fc09a
+  decode4 :: GHC.Types.Int
+  {- Strictness: x -}
+3800ebf8d8cef3d6235ba2b8c0ab5f29
+  decode5 :: Text.ParserCombinators.ReadP.P GHC.Types.Int
+  {- Unfolding: ((GHC.Read.$fReadInt3
+                    GHC.Read.$fReadInt_$sconvertInt
+                    Text.ParserCombinators.ReadPrec.minPrec)
+                   `cast`
+                 (Text.ParserCombinators.ReadP.N:ReadP[0] <GHC.Types.Int>_R)
+                   @ GHC.Types.Int
+                   (Text.Read.readEither5 @ GHC.Types.Int)) -}
+00681a6af91eb5ae46263e1415c0e052
+  decode_go :: [GHC.Types.Char] -> GHC.Types.Char -> GHC.Types.Char
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U(U)> -}
 e2857941ab79fb4f1a91ffe83463c941
   encode :: GHC.Base.String -> GHC.Base.String
   {- Strictness: x -}
+615618e137945173a1f84ad52d4ff8be
+  f :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (cp :: GHC.Base.String) ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Char cp 0# of ww2 {
+                   DEFAULT
+                   -> case Text.Read.readEither6
+                             @ GHC.Types.Int
+                             (Text.ParserCombinators.ReadP.run
+                                @ GHC.Types.Int
+                                RunLength.decode5
+                                (case cp of wild {
+                                   [] -> GHC.List.init2 @ GHC.Types.Char
+                                   : x xs -> GHC.List.init1 @ GHC.Types.Char x xs })) of wild {
+                        [] -> case RunLength.decode4 ret_ty GHC.Base.String of {}
+                        : x ds
+                        -> case ds of wild1 {
+                             []
+                             -> case x of wild2 { GHC.Types.I# y ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.<# 0# y) of wild3 {
+                                  GHC.Types.False -> GHC.Types.[] @ GHC.Types.Char
+                                  GHC.Types.True
+                                  -> let {
+                                       x1 :: GHC.Types.Char
+                                       = RunLength.decode_go
+                                           cp
+                                           (GHC.List.lastError @ GHC.Types.Char)
+                                     } in
+                                     let {
+                                       x2 :: GHC.Base.String
+                                       = GHC.Types.:
+                                           @ GHC.Types.Char
+                                           x1
+                                           (GHC.Types.[] @ GHC.Types.Char)
+                                     } in
+                                     let {
+                                       lvl13 :: [GHC.Types.Char]
+                                       = GHC.Base.++
+                                           @ GHC.Types.Char
+                                           x2
+                                           (GHC.Types.[] @ GHC.Types.Char)
+                                     } in
+                                     letrec {
+                                       $wxs :: GHC.Prim.Int# -> [GHC.Types.Char]
+                                         {- Arity: 1, Strictness: <S,1*U>, Inline: [0] -}
+                                       = \ (ww :: GHC.Prim.Int#) ->
+                                         case ww of ds1 {
+                                           DEFAULT
+                                           -> GHC.Base.++
+                                                @ GHC.Types.Char
+                                                x2
+                                                ($wxs (GHC.Prim.-# ds1 1#))
+                                           1# -> lvl13 }
+                                     } in
+                                     $wxs y } }
+                             : ipv ipv1
+                             -> case RunLength.decode3 ret_ty GHC.Base.String of {} } }
+                   1# -> cp }) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:
