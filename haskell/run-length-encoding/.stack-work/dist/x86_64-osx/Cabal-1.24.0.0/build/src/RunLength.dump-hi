@@ -1,0 +1,113 @@
+
+==================== FINAL INTERFACE ====================
+2017-03-21 03:02:25.930156 UTC
+
+interface run-length-encoding-0.0.0-FyHcxGrdAH29H6gjJRsd6l:RunLength 8001
+  interface hash: 2bd81ab181573d8b8b3d321ad7f77230
+  ABI hash: 629e0c472bf2d49ac81b6fe655e73500
+  export-list hash: b5778c590b0551cb691aaa7f9d7c802f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: a4046e0fdab24403354cf30558c1ea1c
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  RunLength.decode
+  RunLength.encode
+module dependencies:
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.0.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+                      regex-base-0.93.2@regex-base-0.93.2-4lnOy3Rb1yfISFVEXVfJuH
+                      regex-compat-0.95.1@regex-compat-0.95.1-JPDhOGKcrkD8S1t3VsLLUt
+                      regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         regex-base-0.93.2@regex-base-0.93.2-4lnOy3Rb1yfISFVEXVfJuH:Text.Regex.Base.Context
+         regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR:Text.Regex.Posix.ByteString
+         regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR:Text.Regex.Posix.ByteString.Lazy
+         regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR:Text.Regex.Posix.Sequence
+         regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR:Text.Regex.Posix.String
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+import  -/  base-4.9.0.0:Data.List 49b86831b79b49ce5d4d9416ecba61df
+import  -/  base-4.9.0.0:Data.OldList 0058409f994fb13ae0616e3f1e5b4dae
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  regex-base-0.93.2@regex-base-0.93.2-4lnOy3Rb1yfISFVEXVfJuH:Text.Regex.Base.RegexLike b8692477348c2a4d1fff220a9b06b0e5
+import  -/  regex-compat-0.95.1@regex-compat-0.95.1-JPDhOGKcrkD8S1t3VsLLUt:Text.Regex 2e0f41d0f59e05da1f92fdea8b839e85
+import  -/  regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR:Text.Regex.Posix 9d77d3563c26f7b32a543afbb9648050
+import  -/  regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR:Text.Regex.Posix.Wrap c3f63f009115a1cd2244b2fcb282d1b7
+da09294283fffddcfca376a27e441036
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   RunLength.$trModule2
+                   RunLength.$trModule1) -}
+7e55de704617d63aebffeac774d7a0d8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "RunLength"#) -}
+748a7320502a2f4200834f26c2116a76
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "run-length-encoding-0.0.0-FyHcxGrdAH29H6gjJRsd6l"#) -}
+256a0bc0fe9292c14773049758d0c6ed
+  decode :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (cs :: GHC.Base.String) ->
+                 case Text.Regex.Base.Context.$fRegexContextabAllTextMatches10
+                        @ [GHC.Types.Char]
+                        (Text.Regex.Posix.String.$fRegexLikeRegex[]_$cmatchAllText
+                           RunLength.decode2
+                           cs) of wild {
+                   [] -> GHC.Types.[] @ GHC.Types.Char
+                   : x xs1
+                   -> Data.OldList.intercalate_$spoly_go
+                        @ GHC.Types.Char
+                        x
+                        (Data.OldList.prependToAll
+                           @ [GHC.Types.Char]
+                           RunLength.decode1
+                           xs1) }) -}
+e2db9825ff4a62b951b6b691946e5f6b
+  decode1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "a "#) -}
+03d8c3fc3c3c66f81cc60d97dab062cd
+  decode2 :: Text.Regex.Posix.Wrap.Regex
+  {- Unfolding: (Text.Regex.Posix.String.$fRegexMakerRegexCompOptionExecOption[]_$cmakeRegexOpts
+                   Text.Regex.Posix.Wrap.$fRegexOptionsRegexCompOptionExecOption1
+                     `cast`
+                   (Trans
+                        (Sym (Foreign.C.Types.N:CInt[0]))
+                        (Sym (Text.Regex.Posix.Wrap.N:CompOption[0])))
+                   Text.Regex.Posix.Wrap.execBlank1
+                     `cast`
+                   (Trans
+                        (Sym (Foreign.C.Types.N:CInt[0]))
+                        (Sym (Text.Regex.Posix.Wrap.N:ExecOption[0])))
+                   RunLength.decode3) -}
+0eed1e1a83a6b0cf2204b071b0817f61
+  decode3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "[0-9]*[[:alpha:]]"#) -}
+e2857941ab79fb4f1a91ffe83463c941
+  encode :: GHC.Base.String -> GHC.Base.String
+  {- Strictness: x -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
