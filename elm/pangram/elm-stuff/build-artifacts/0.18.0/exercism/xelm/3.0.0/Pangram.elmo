@@ -1,0 +1,27 @@
+var _exercism$xelm$Pangram$isNot = F2(
+	function (a, b) {
+		return !_elm_lang$core$Native_Utils.eq(a, b);
+	});
+var _exercism$xelm$Pangram$isPangram_ = F2(
+	function (s, l) {
+		isPangram_:
+		while (true) {
+			var _p0 = _elm_lang$core$String$uncons(s);
+			if (_p0.ctor === 'Nothing') {
+				return _elm_lang$core$String$isEmpty(l);
+			} else {
+				var _v1 = _p0._0._1,
+					_v2 = A2(
+					_elm_lang$core$String$filter,
+					_exercism$xelm$Pangram$isNot(
+						_elm_lang$core$Char$toLower(_p0._0._0)),
+					l);
+				s = _v1;
+				l = _v2;
+				continue isPangram_;
+			}
+		}
+	});
+var _exercism$xelm$Pangram$isPangram = function (s) {
+	return A2(_exercism$xelm$Pangram$isPangram_, s, 'abcdefghijklmnopqrstuvwxyz');
+};

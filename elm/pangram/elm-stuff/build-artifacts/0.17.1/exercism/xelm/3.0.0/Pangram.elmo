@@ -1,7 +1,0 @@
-var _exercism$xelm$Pangram$isPangram = function (line) {
-	return A2(
-		_elm_lang$core$String$join,
-		'',
-		_elm_lang$core$List$sort(
-			A2(_elm_lang$core$String$split, '', line)));
-};

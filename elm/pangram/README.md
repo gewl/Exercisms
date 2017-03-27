@@ -9,11 +9,25 @@ The best known English pangram is "The quick brown fox jumps over the lazy dog."
 The alphabet used is ASCII, and case insensitive, from 'a' to 'z'
 inclusively.
 
-## Getting Started
+## Elm Installation
 
-To get started, please see docs on exercism.io:
+Refer to the [Exercism help page](http://exercism.io/languages/elm) for Elm
+installation and learning resources.
 
-http://exercism.io/languages/elm
+## Writing the Code
+
+The first time you start an exercise, you'll need to ensure you have the
+appropriate dependencies installed.
+
+```bash
+$ npm install
+```
+
+Execute the tests with:
+
+```bash
+$ npm test
+```
 
 ## Source
 
